@@ -1,0 +1,18 @@
+//In order to connect a 2D null to the composition space of a 3D null
+//put this in the position of a 2D null that is directly above the 3D null in the timeline
+null3D = thisComp.layer(index+1);
+null3D.toComp(null3D.anchorPoint);
+
+//this is what my code for the path of the main lines looked like
+p1 = thisComp.layer("BL 3").position;
+p2 = thisComp.layer("BL 2").position;
+p3 = thisComp.layer("FL 2").position;
+p4 = thisComp.layer("FL").position;
+p5 = thisComp.layer("BL").position;
+p6 = thisComp.layer("BR").position;
+p7 = thisComp.layer("FR").position;
+p8 = thisComp.layer("FR 2").position;
+p9 = thisComp.layer("BR 2").position;
+p10 = thisComp.layer("BR 3").position;
+
+createPath(points = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10], inTangents = [], outTangents = [], isClosed = false);
